@@ -831,6 +831,7 @@
       newPath = findPath(RootNode, uri);
       if (newPath == null) {
         console.warn("[FINCH] Could not find route for: " + uri);
+        Finch.bypassed();
         return false;
       }
       queryParameters = parseQueryString(queryString);
